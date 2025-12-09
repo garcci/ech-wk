@@ -98,7 +98,7 @@ ech-workers.exe -f your-worker.workers.dev:443 -l 127.0.0.1:1080
 ```bash
 ./ech-workers \
   -f your-worker.workers.dev:443 \
-  -l 127.0.0.1:1080 \
+  -l 0.0.0.0:1080 \
   -token your-token \
   -ip saas.sin.fan \
   -dns dns.alidns.com/dns-query \
@@ -253,7 +253,7 @@ start_service() {
     procd_open_instance
     procd_set_param command /usr/bin/ech-workers \
         -f your-worker.workers.dev:443 \
-        -l 127.0.0.1:1080 \
+        -l 0.0.0.0:1080 \
         -token your-token \
         -ip saas.sin.fan \
         -dns dns.alidns.com/dns-query \
